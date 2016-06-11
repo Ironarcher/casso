@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<style>
+		.topspace {
+			margin-top: 40px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container topspace">
+			<div class="well">
+				<form method="post" action="/example/" role="form">
+					{% csrf_token %}
+					<div class="form-group">
+						<label for="username">Username</label>
+		            	<input type="text" class="form-control" id="username" name="username" value= {{ username_init }}>
+		            </div>
+		            <button type="submit" value="login">Submit</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
